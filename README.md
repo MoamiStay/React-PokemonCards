@@ -1,3 +1,19 @@
+# Learning REACT with pokemon
+
+![REACT pokemon](./src/media/react_pkmn.jpg "REACT pokemon")  
+[Visit deployed site here](https://rainydaysmoamistay.netlify.app/ "REACT pokemon")
+
+---
+
+# Links:
+
+links:  
+images: https://www.pokemon.com/no/pokedex/bulbasaur
+
+---
+
+# Default docs:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

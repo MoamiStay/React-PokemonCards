@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { pkmn } from "./utils/pkmn.js";
+import Card from "./components/Card.js";
+import "./styles/main.css";
 
-function App() {
+const App = () => {
+  // Conditional rendering:
+  // isDay = true: show all content.
+  // isDay = false: "Come back tomorrow"
+  let isDay = true;
+  if (!isDay) {
+    return <h1>Come back tomorrow</h1>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2
+        style={{
+          display: "block",
+          backgroundColor: "#7dba6b",
+          color: "black",
+          textAlign: "center",
+          padding: "10px 0 0 0",
+          fontSize: "1rem",
+        }}
+      >
+        REACT
+      </h2>
+      <h1
+        style={{
+          display: "block",
+          backgroundColor: "#7dba6b",
+          color: "white",
+          textAlign: "center",
+          marginBottom: "20px",
+          padding: "0 0 10px 0",
+        }}
+      >
+        {isDay ? "Pokemon starters" : "Pokemon in the evening"}
+      </h1>
+      <section className="flexible">
+        {pkmn.map((pokemon) => {
+          return (
+            <Card
+              key={pokemon.id}
+              name={pokemon.name}
+              media={pokemon.media}
+              type={pokemon.type}
+              base={pokemon.base}
+            />
+          );
+        })}
+      </section>
+    </>
   );
-}
+};
 
 export default App;

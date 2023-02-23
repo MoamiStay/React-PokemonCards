@@ -1,0 +1,86 @@
+body {
+  background-color: #eeeeee;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+ul {
+  font-size: 0.8rem;
+}
+
+h3,
+ul {
+  padding: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(224, 224, 224);
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.flexible {
+  display: grid;
+  gap: 15px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 70%;
+}
+
+.card {
+  width: 100%;
+  border: solid 3px rgb(176, 176, 176);
+  border-radius: 5px;
+}
+
+.container > img {
+  width: 100%;
+}
+
+.water > h1 {
+  background-color: rgb(177, 177, 248);
+}
+
+.fire > h1 {
+  background-color: rgb(248, 177, 202);
+}
+
+.grass > h1 {
+  background-color: rgb(178, 248, 177);
+}
+
+@media (max-width: 800px) {
+  .flexible {
+    display: grid;
+    gap: 25px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 480px) {
+  .flexible {
+    display: grid;
+    gap: 25px;
+    margin: auto;
+    grid-template-columns: auto;
+    max-width: 85%;
+  }
+
+  h3,
+  ul {
+    padding: 5px 15px 5px 15px;
+  }
+}
